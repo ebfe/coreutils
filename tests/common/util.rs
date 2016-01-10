@@ -217,7 +217,8 @@ impl AtPath {
     }
     pub fn root_dir(&self) -> String {
         log_info("current_directory", "");
-        self.subdir.to_str().unwrap().to_owned()
+        let path = fs::canonicalize(&self.subdir).unwrap();
+        path.to_str().unwrap().to_owned()
     }
 }
 
