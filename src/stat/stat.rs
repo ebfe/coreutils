@@ -88,7 +88,7 @@ macro_rules! print_adjusted {
 static NAME: &'static str = "stat";
 static VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
-const MOUNT_INFO: &'static str = "/etc/mtab";
+const MOUNT_INFO: &'static str = "/proc/mounts";
 pub const F_ALTER: u8 = 1;
 pub const F_ZERO: u8 = 1 << 1;
 pub const F_LEFT: u8 = 1 << 2;
